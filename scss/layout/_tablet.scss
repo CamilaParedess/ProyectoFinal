@@ -1,0 +1,213 @@
+/* Tablet */
+
+/* media query tablet */
+
+/* Media query tablet 430px */
+@media only screen and (min-width: 430px){
+    a .buscaLibre{
+        position: relative;
+        right: 0px;
+    }
+}
+
+/* Media query tablet 600px */
+@media only screen and (min-width: 600px){
+
+    /* Animaciones */
+    .scale-in-center-index {
+        -webkit-animation: none;
+                animation: none;
+    }
+    
+    @-webkit-keyframes scale-in-center-index {
+        0% {
+          -webkit-transform: none;
+                  transform: none;
+          opacity: none;
+        }
+        100% {
+          -webkit-transform: none;
+                  transform: none;
+          opacity: none;
+        }
+    }
+    @keyframes scale-in-center-index {
+        0% {
+          -webkit-transform: none;
+                  transform: none;
+          opacity: none;
+        }
+        100% {
+          -webkit-transform: none;
+                  transform: none;
+          opacity: none;
+        }
+    }
+    /* Fin animaciones */
+
+    
+    /* Inicio Nav */
+    .imgLogo{
+        height: 60px;
+    }
+    /* Fin Nav */
+
+
+    /* Grids */
+
+    /* Grid index */
+    .mainIndex{
+        display: grid;
+        grid-template-areas: "tituloIndex tituloIndex"
+                             "parrafoIndex imgIndex"
+                             "parrafoIndex imgIndex";
+    }
+
+
+    /* Grid libros.html */
+    .contenedorPaginaLibro{
+        display: grid;
+        grid-template-areas: "img1 img2 img3"
+                             "img4 img5 img6"
+                             "img7 img8 img9"
+                             "img10 img11 img12";
+        grid-template-rows: 400px 400px 400px;
+        justify-content: space-around;
+    }
+
+    /* Grid popular.html */
+    .contenedorPaginaPopular{
+        display: grid;
+        grid-template-areas: "img1 img2"
+                             "img3 img4";
+        grid-template-rows: 400px 400px;  
+    }
+
+    /* Grid sobrenosotros.html */
+    .contenedorNosotros{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "parrafoGridNosotros imgGridNosotros";
+    }
+
+    /* Grid libros individuales */
+    .contenedorLibroIndividual {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 0.4fr 1.5fr; 
+        gap: 0px 15px; 
+        grid-template-areas: 
+          "tituloGridLibros tituloGridLibros tituloGridLibros"
+          "imagenGridLibros sinopsisGridLibros linksGridLibros";
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    /* Fin grids */
+
+
+    /* Body */
+    h1{
+        display: flex;
+        justify-content: flex-start;
+        margin: 10px;
+    }
+    
+    .tituloLibros{
+        @include dis-flex-jus-center;
+        margin: 10px 10px;
+    }
+    /* Fin body */
+
+
+    /* Inicio Index */
+    .imgIndex img{
+        height: auto;
+        width: 100%;
+    }
+    
+    .imgIndex{
+        grid-area: imgIndex;
+        @include dis-flex-jus-center;
+        align-items: center;
+        margin: 1px 40px;
+        height: auto;
+    }
+
+    .tituloIndex{
+        grid-area: tituloIndex;
+        text-align: center;
+    }
+
+    .parrafoIndex{
+        margin-bottom: 0px;
+        grid-area: parrafoIndex;
+        @include dis-flex-jus-center;
+        padding: 35px;
+        align-items: center;
+    }
+
+    .footerIndex{
+        margin-top: 300px;
+        margin-bottom: 20px;
+    }
+    /* Fin Index */
+
+
+    /* Inicio libros.html */
+    .tituloLibros{
+        @include dis-flex-jus-center;
+        margin: 10px 10px;
+    }
+    /* Fin libros.html */
+
+
+    /* Inicio sobrenosotros.html */
+    .parrafoGridNosotros{ 
+        grid-area: parrafoGridNosotros; 
+    }
+      
+    .imgGridNosotros{ 
+        grid-area: imgGridNosotros; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .imgNosotros img{
+        height: auto;
+        width: 100%;
+    }
+    /* Fin sobrenosotros.html */
+
+
+    /* Inicio libro individuales */
+    .imagenLibroIndividual img{
+        height: auto;
+        width: 180px;
+    }
+
+    .linksGridLibros h2{
+          padding-left: 40px;
+    }
+
+    div .imagenLinks{
+        padding-left: 85px;
+    }
+
+    a .buscaLibre{
+        position: relative;
+        bottom: 10px;
+    }
+    /* Fin libros individuales */
+
+
+    /* Inicio contacto.html */
+    .textareaForm textarea{
+        max-width: 540px;
+    }
+    /* Fin contacto.html */
+}

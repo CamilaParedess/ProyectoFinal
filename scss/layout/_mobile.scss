@@ -1,0 +1,581 @@
+@import "../utilities/variables";
+@import "../utilities/mixin";
+@import "../utilities/maps";
+@import "../utilities/extend";
+
+/* Mobile */
+
+/* Animaciones */
+.scale-in-center {
+	-webkit-animation: scale-in-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+}
+@keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+}
+
+.scale-in-center-index {
+	-webkit-animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes scale-in-center-index {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+}
+@keyframes scale-in-center-index {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+}
+  
+.text-focus-in {
+	-webkit-animation: text-focus-in 699ms cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 699ms cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+}
+
+@keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+}
+
+.hvr-glow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
+}
+
+.hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+  
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #35abf9;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+}
+
+.hvr-underline-from-left {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-from-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: black;
+    height: 4px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+    right: 0;
+}
+/* Fin de animaciones */
+
+
+/* Inicio Grids */
+
+/* Grid libros.html */
+.contenedorPaginaLibro{
+    display: grid;
+    grid-template-areas: "img1 img2"
+                         "img4 img3"
+                         "img5 img6"
+                         "img7 img8"
+                         "img9 img10"
+                         "img11 img12";
+    grid-template-rows: 400px 400px 400px 400px 400px;                         
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.img1{
+    grid-area: img1;
+}
+
+.img2{
+    grid-area: img2;
+}
+
+.img3{
+    grid-area: img3;
+}
+
+.img4{
+    grid-area: img4;
+}
+
+.img5{
+    grid-area: img5;
+}
+
+.img6{
+    grid-area: img6;
+}
+
+.img7{
+    grid-area: img7;
+}
+
+.img8{
+    grid-area: img8;
+}
+
+.img9{
+    grid-area: img9;
+}
+
+.img10{
+    grid-area: img10;
+}
+
+.img11{
+    grid-area: img11;
+}
+
+.img12{
+    grid-area: img12;
+}
+
+
+/* Grid popular.html */
+.contenedorPaginaPopular{
+    display: grid;
+    grid-template-areas: "img1"
+                         "img2"
+                         "img3"
+                         "img4";
+    justify-content: space-around;
+    grid-template-rows: 400px 400px 400px;
+    padding: 20px;
+}
+
+
+/* Grid paginas individuales de libros */
+.contenedorLibroIndividual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1.77fr 1.3fr;
+    gap: 0px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "tituloGridLibros tituloGridLibros"
+        "imagenGridLibros sinopsisGridLibros"
+        "linksGridLibros linksGridLibros";
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.tituloGridLibros {
+    grid-area: tituloGridLibros;
+}
+
+.imagenGridLibros {
+    grid-area: imagenGridLibros;
+    padding-top: 30px;
+}
+
+.sinopsisGridLibros {
+    grid-area: sinopsisGridLibros;
+}
+
+.linksGridLibros {
+    grid-area: linksGridLibros;
+}
+/* Fin grids */
+
+
+/* Body */
+body{
+    background: map-get($map:$colores, $key:color-body);
+ }
+ 
+ 
+ .tituloPaginas{
+     @include fuenteh1;
+     font-weight: bold;
+     margin-top: 50px;
+     margin-bottom: 35px;
+     margin-left: 25px;
+ }
+ 
+ h1{
+     @extend %dis-flex-jus-fs;
+     margin: 10px;
+ }
+ /* Fin body */
+ 
+ 
+ /* Inicio Header */
+ header{
+     background-color: $color-header;
+     position: sticky;
+     top: 0;
+     z-index: 1;
+     
+ }
+ /* Fin header */
+ 
+ 
+ /* Inicio nav */
+ header .logo{
+     transition: 200ms linear;
+ }
+ 
+ header .logo:hover{
+     transform: scale(1.020);
+ }
+ 
+ .imgLogo{
+     height: 40px + 5px;
+ }
+ .navbar-brand{
+     margin-right: 0
+ }
+ 
+ nav ul{
+     @include dis-flex-jus-center;
+ }
+ 
+ nav ul li{
+     @include dis-flex-jus-center;
+     align-items: center;
+     list-style: none;
+     margin: 0.5rem;
+     padding: 0.3rem;
+ }
+ 
+ nav ul li a{
+     text-decoration: none;
+     color: black;    
+     display: flex;
+ }
+ /* Fin del nav */
+ 
+ 
+ /* Index */
+ .tituloIndex{
+     @include dis-flex-jus-center;
+     align-items: center;
+     grid-area: mainP;
+     margin: 20px;
+     margin-top: 50px;
+     font-weight: bold;
+     text-align: center;
+ }
+ 
+ .imgIndex{
+     @if $ocultar-img == on{
+         display: none;
+     }
+     @else{
+         display: flex;
+     }
+     }
+ 
+ 
+ .parrafoIndex{
+     display: flex;
+     justify-content: space-around;
+     margin: 0 20px;
+     font-size: 1.188rem;
+     flex-direction: column;
+ }
+ 
+ .negritaIndex{
+     text-align: center;
+ }
+ 
+ /* style de todos los footer */
+ .footerIndex{
+     text-align: center;
+     margin-top: 300px;
+     margin-bottom: 20px;
+ }
+ /* Fin Index */
+
+
+/* Inicio libros.html */
+.tituloLibros{
+    @include dis-flex-jus-center;
+    margin: 10px 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.contenedorLibro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.portadaLibros{
+    transition: 200ms linear;
+    height: 250px;
+    width: 180px;
+}
+
+.portadaLibros:hover{
+    transform: scale(1.040);
+}
+
+
+.tituloLibros a{
+    display: flex;
+    justify-content: left;
+    text-decoration: none;
+    color: black;
+    width: 180px;
+}
+/* Fin libros.html */
+
+
+/* Inicio popular.html */
+.portadaPopular{
+    transition: 200ms linear;
+    height: 250px;
+    width: 180px;
+}
+
+.portadaPopular:hover{
+    transform: scale(0.95);
+}
+/* Fin popular.html */
+
+
+/* style de libros individuales */
+.tituloPaginasLibros{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.tituloGridLibros p{
+    padding: 5px;
+}
+
+.sinopsisGridLibros h2{
+    text-decoration: underline;
+}
+
+.linksGridLibros h2{
+    text-decoration: underline;
+}
+
+.imagenLibroIndividual img{
+    height: auto;
+    width: 166px;
+}
+
+div .imagenLinks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.imagenLinks img{
+    width: auto;
+    height: 30px;
+}
+
+a .bookDepository{
+    height: 50px;
+}
+
+a .googlePlay{
+    height: 40px;
+}
+
+a .buscaLibre{
+    position: relative;
+    right: 20px;
+}
+
+div .linksCompra{
+    padding: 10px;
+}
+
+.spanBlock{
+    display: block;
+}
+/* Fin styles de libros individuales */
+
+
+/* Inicio sobrenosotros.html */
+.parrafoNosotros{
+    @extend %dis-flex-jus-fs;
+    margin: 0 20px;
+    font-size: 1.188rem;
+    flex-direction: column;
+}
+
+.imgNosotros{
+    display: flex;
+    justify-content: center;
+}
+/* Fin sobrenosotros.html */
+
+
+/* Inicio contacto.html */
+form{
+    padding: 10px;
+}
+
+label{
+    padding: 14px;
+}
+
+.formClass{
+    border: black solid 1px;
+    margin: 15px;
+    padding-bottom: 30px;
+}
+
+.motivoLabel{
+    padding-left: 40px;
+}
+
+.decorationLabel, legend{
+    font-family: 'Exo', sans-serif;
+    font-weight: 900;
+}
+
+.textareaForm{
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.textareaForm textarea{
+    width: 100%;
+    margin: 0 10px 0 10px;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.botonesForm{
+    display: flex;
+
+}
+
+.botonEnviar {
+    margin-right: 10px;
+    margin-left: 27px;
+}
+
+input[type=submit], input[type=reset] {
+    border-radius: 5px;
+    border: 0;
+    width: 80px;
+    height:25px;
+    background: #a2b6d0;
+}
+/* Fin contacto.html */
+
+

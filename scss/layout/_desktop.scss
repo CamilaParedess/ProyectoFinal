@@ -1,0 +1,128 @@
+/* Desktop */
+
+/* media query desktop */
+
+/* Media query 992px */
+@media only screen and (min-width: 992px){
+    .navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    justify-content: flex-end;
+}
+}
+
+/* Media query 1024px */
+@media only screen and (min-width: 1024px){
+
+    /* Grids */
+
+    /* Grid libros.html */
+    .contenedorPaginaLibro{
+        display: grid;
+        grid-template-areas: "img1 img2 img3 img4"
+                             "img5 img6 img7 img8"
+                             "img9 img10 img11 img12";
+        grid-template-rows: 400px 400px;                     
+        justify-content: space-around;
+    }
+
+    /* Grid popular.html */
+    .contenedorPaginaPopular{
+        display: grid;
+        grid-template-areas: "img1 img2 img3 img4";
+        grid-template-rows: 400px;
+    }
+
+    /* Grid libros individuales */
+    .contenedorLibroIndividual {
+        display: grid; 
+        grid-template-columns: 0.85fr 1fr 1fr; 
+        grid-template-rows: 0.4fr 1.5fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "tituloGridLibros tituloGridLibros tituloGridLibros"
+          "imagenGridLibros sinopsisGridLibros linksGridLibros";
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    /* Fin Grids */
+
+
+    /* Inicio nav */
+    header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header nav{
+        @include dis-flex-jus-center;
+    }
+
+    nav ul li{
+        display: flex;
+        align-items: center;
+        border: 0 rgba(255, 255, 255, 0) solid;
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    /* Fin nav */
+
+
+    /* Inicio libros individuales */
+    div .imagenLinks {
+        display: grid;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 15px;
+    }
+
+    .imagenGridLibros{
+        padding-top: 0px;
+    }
+
+    .tituloPaginasLibros {
+        margin-left: 63px;
+    }
+
+    .tituloGridLibros p{
+        margin-left: 63px;
+    }
+
+    .imagenLibroIndividual{
+        margin-left: 65px;
+    }
+
+    .sinopsisGridLibros{
+        margin-right: 70px;
+    }
+
+    .imagenLibroIndividual img{
+        height: auto;
+        width: 200px;
+    }
+    /* Fin libros individuales */
+
+
+    /* Inicio sobrenosotros.html */
+    .imgNosotros img{
+        height: auto;
+        width: 450px;
+    }
+    /* Fin sobrenosotros.html */
+
+    
+    /* Inicio contacto.html */
+    .formClass{
+        padding: 15px 30px 15px 30px;
+        margin-right: 30px;
+    }
+    
+    .motivoLabel{
+        padding-left: 110px;
+    }
+    /* Fin contacto.html */
+}
